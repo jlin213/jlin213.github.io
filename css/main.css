@@ -64,7 +64,7 @@ html {
 
 .aboutButton {
   margin-top: 50%;
-  margin-left: 45%; }
+  margin-left: 43%; }
 
 .aboutButton span {
   cursor: pointer;
@@ -92,8 +92,8 @@ html {
 
 .projectButton {
   margin-bottom: 10vw;
-  margin-left: 4vw;
-  margin-top: 1.5vw; }
+  margin-left: 22%;
+  margin-top: 10%; }
 
 .icon {
   padding-left: 8vw !important; }
@@ -195,47 +195,63 @@ g {
 path {
   fill: none;
   stroke: #000000;
-  stroke-width: 12;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10; }
+  stroke-width: 20px;
+  stroke-linejoin: miter; }
 
 .stroke-J {
-  stroke-dasharray: 2000;
-  animation: write1 5s infinite linear; }
+  stroke-dasharray: 3000;
+  animation: write1 5s linear; }
 
-.stroke-ulianne, .firstDot {
-  stroke-dasharray: 6000;
-  animation: write2 5s infinite linear; }
+.stroke-ulianne {
+  stroke-dasharray: 11000;
+  animation: write2 5s linear; }
+
+.firstDot {
+  stroke-dasharray: 2000;
+  animation: write3 5s linear; }
 
 .stroke-L {
-  stroke-dasharray: 2000;
-  animation: write3 5s infinite linear; }
+  stroke-dasharray: 5000;
+  animation: write4 5s linear; }
 
-.stroke-in, .secondDot {
-  stroke-dasharray: 1500;
-  animation: write4 5s infinite linear; }
+.stroke-in {
+  stroke-dasharray: 4000;
+  animation: write5 5s linear; }
+
+.secondDot {
+  stroke-dasharray: 4000;
+  animation: write6 5s linear; }
 
 /*  keyframes */
 @keyframes write1 {
   0% {
-    stroke-dashoffset: 2000; }
+    stroke-dashoffset: 3000; }
   7% {
     stroke-dashoffset: 0; } }
 @keyframes write2 {
   0%, 7% {
-    stroke-dashoffset: 6000; }
+    stroke-dashoffset: 11000; }
   60% {
     stroke-dashoffset: 0; } }
 @keyframes write3 {
-  0%, 55% {
+  0%, 30% {
     stroke-dashoffset: 2000; }
-  70% {
+  35% {
     stroke-dashoffset: 0; } }
 @keyframes write4 {
+  0%,63% {
+    stroke-dashoffset: 5000; }
+  75% {
+    stroke-dashoffset: 0; } }
+@keyframes write5 {
   0%, 70% {
-    stroke-dashoffset: 1500; }
+    stroke-dashoffset: 4000; }
   90% {
+    stroke-dashoffset: 2000; } }
+@keyframes write6 {
+  0%, 73% {
+    stroke-dashoffset: 4000; }
+  78% {
     stroke-dashoffset: 0; } }
 /*
  * Remove text-shadow in selection highlight:
