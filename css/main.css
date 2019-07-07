@@ -63,8 +63,8 @@ html {
   font-family: 'Raleway'; }
 
 .aboutButton {
-  margin-top: 20%;
-  margin-left: 10%; }
+  margin-top: 50%;
+  margin-left: 45%; }
 
 .aboutButton span {
   cursor: pointer;
@@ -199,19 +199,19 @@ path {
 
 .stroke-J {
   stroke-dasharray: 2000;
-  animation: write1 6s infinite linear; }
+  animation: write1 5s infinite linear; }
 
 .stroke-ulianne, .firstDot {
   stroke-dasharray: 6000;
-  animation: write2 6s infinite linear; }
+  animation: write2 5s infinite linear; }
 
 .stroke-L {
   stroke-dasharray: 2000;
-  animation: write3 6s infinite linear; }
+  animation: write3 5s infinite linear; }
 
 .stroke-in, .secondDot {
   stroke-dasharray: 1500;
-  animation: write4 6s infinite linear; }
+  animation: write4 5s infinite linear; }
 
 /*  keyframes */
 @keyframes write1 {
@@ -222,7 +222,7 @@ path {
 @keyframes write2 {
   0%, 7% {
     stroke-dashoffset: 6000; }
-  50% {
+  60% {
     stroke-dashoffset: 0; } }
 @keyframes write3 {
   0%, 55% {
