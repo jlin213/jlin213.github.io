@@ -1,5 +1,6 @@
 var $window = $(window);
 var $elem = $(".contact-animation")
+var $elem1 = $(".contact-text")
 
 function isScrolledIntoView($elem, $window) {
     var docViewTop = $window.scrollTop();
@@ -13,8 +14,10 @@ function isScrolledIntoView($elem, $window) {
 $(document).on("scroll", function () {
     if (isScrolledIntoView($elem, $window)) {
         $elem.addClass("animation");
+        $elem1.addClass("animation1");
     }else{
     	$elem.removeClass("animation");
+    	$elem1.removeClass("animation1");
     }
 
 });
