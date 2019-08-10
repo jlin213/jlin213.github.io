@@ -241,7 +241,9 @@ html {
   margin-bottom: 15vw;
 
 }
-
+.contact-layout{
+  margin-left: 100px;
+}
 
 // Name signature styling
 .scaling-svg-container {
@@ -328,47 +330,61 @@ path{
 
 }
 
-// .stroke-J {
-//   stroke-dasharray: 300;
-//   animation: write1 5s linear;
-// }
-// .stroke-ulianne {
-//   stroke-dasharray: 11000;
-//   animation: write2 5s linear;
-// }
+.contact-chat {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  color:#555;
+  font-family:'Roboto';
+  font-weight:300;
+  font-size:50px;
+  margin-top: 50px;
+}
+.contact-text{
+  font-family:'Roboto';
+  font-size:18px;
+  color: gray;
+}
+
+.animation{
+  margin-left:-355px;
+  animation: slidein 7s linear forwards;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { 
+    opacity:0;
+    margin-left:-800px; 
+    }
+    20% { 
+    opacity: 1;
+    margin-left:-800px;
+    }
+    35% { 
+    opacity: 1;
+    margin-left:0px; 
+    }
+    100% { 
+    margin-left:0px; 
+    }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
 
 
-// .firstDot {
-//   stroke-dasharray: 2000;
-//   animation: write3 5s linear;
-// }
-// .stroke-L {
-//   stroke-dasharray: 5000;
-//   animation: write4 5s linear;
-
-// }
-
-// .stroke-in {
-//   stroke-dasharray: 4000;
-//   animation: write5 5s linear;
-// }
-
-
-// .secondDot {
-//   stroke-dasharray: 4000;
-//   animation: write6 5s linear;
-
-// }
-/*  keyframes */
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
 
 ::-moz-selection {
     background: #b3d4fc;
@@ -378,19 +394,6 @@ path{
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
 }
 
 /*

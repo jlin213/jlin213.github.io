@@ -210,6 +210,9 @@ html {
   margin-top: 5vw;
   margin-bottom: 15vw; }
 
+.contact-layout {
+  margin-left: 100px; }
+
 .scaling-svg-container {
   position: relative;
   height: 0;
@@ -272,16 +275,60 @@ path {
     stroke-dashoffset: 1000; }
   100% {
     stroke-dashoffset: 0; } }
-/*  keyframes */
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+.contact-chat {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #555;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 50px;
+  margin-top: 50px; }
+
+.contact-text {
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: gray; }
+
+.animation {
+  margin-left: -355px;
+  animation: slidein 7s linear forwards; }
+
+@keyframes showup {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 1; }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    margin-left: -800px; }
+  20% {
+    opacity: 1;
+    margin-left: -800px; }
+  35% {
+    opacity: 1;
+    margin-left: 0px; }
+  100% {
+    margin-left: 0px; } }
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px; }
+  20% {
+    opacity: 1;
+    width: 0px; }
+  30% {
+    width: 355px; }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    width: 355px; } }
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none; }
@@ -289,17 +336,6 @@ path {
 ::selection {
   background: #b3d4fc;
   text-shadow: none; }
-
-/*
- * A better looking default horizontal rule
- */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0; }
 
 /*
  * Remove the gap between audio, canvas, iframes,
