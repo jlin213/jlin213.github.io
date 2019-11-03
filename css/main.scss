@@ -25,6 +25,7 @@ html {
     overflow-y: scroll;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;
+    overflow-x: hidden;
 
 }
 html::-webkit-scrollbar { width: 0 !important }
@@ -42,10 +43,6 @@ html::-webkit-scrollbar { width: 0 !important }
   pointer-events: none;
   z-index: 2;
 }
-
-
-
-
 @keyframes cursorAnim {
     0% {
         transform: scale(1);
@@ -57,8 +54,9 @@ html::-webkit-scrollbar { width: 0 !important }
 .nav-item1{
     font-family: 'Merriweather', serif;
     color: #D5D5D8;
-    font-size: 1.3vw;
+    font-size: 1.25em;
 }
+// Change color
 .nav-item1:hover{
     color: rgba(250, 250, 250, 0.4);
 }
@@ -75,52 +73,76 @@ html::-webkit-scrollbar { width: 0 !important }
   font-family: 'Spectral', serif;
   color: white;
   // padding-top: 5%;
-  font-size: 7vw;
+  font-size: 7.3em;
   text-align: center;
 }
 .home-text{
   font-family: 'Spectral', serif;
   color: rgba(250, 250, 250, 0.4);
-  font-size: 1.5vw;
+  font-size: 1.8em;
   text-align: center; 
   // padding-top: 10%;
 }
 .home-line1{
-  padding-top: 15%;
-}
-.home-line3{
-  // padding-top: 5%;
+  padding-top: 7em;
 }
 
-#bgVid{
-  overflow: hidden;
-  position: relative;
-  z-index: -1;
-  min-width: 100%; 
-  min-height: 10%;
-  filter:opacity(90%);
-
-}
-.overlay {
-  position:absolute;
-  top: 50px;
-  left: 140px;
-  z-index: 10;
-  width: 100%; 
+.mouse {
+  max-width: 1.6rem;
+  width: 100%;
+  height: auto;
 }
 
+.mouse-scroll {
+  margin-top: 11vw;
+}
+.scroll {
+  animation-name: scroll;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.650, -0.550, 0.250, 1.500);
+  animation-iteration-count: infinite;
+  transform-origin: 50% 20.5px;
+  will-change: transform, opacity;
+  opacity: 1;
+}
+
+.scroll-link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes scroll {
+
+  0%, 20% {
+    transform: translateY(0) scaleY(1);
+  }
+
+  100% {
+    transform: translateY(36px) scaleY(2);
+    opacity: 0;
+  }
+
+}
 #about {
-  margin-top: 100px;
-  padding-top: 100px;
+  padding-top: 12em;
   height: 100%;
-  padding-left: 100px;
+  padding-left: 5em;
+  padding-right: 5em;
 }
 
-.nameTitle{
-    font-family: 'Merriweather', serif;
-    color: white  ;
-    font-size: 5vw;
-    text-align: center;
+.icon{
+  padding-left: 2.2em!important;
+}
+
+.about-me{
+  min-height: 100%;
+  height: 100%;
+  font-size: 4.2em;
+  text-align: center; 
+  padding-bottom: 1em;
+  padding-left: 0.3em;
+  font-family: bookman-jf-pro, serif;
 }
 
 .aboutButton,.projectButton {
@@ -138,8 +160,8 @@ html::-webkit-scrollbar { width: 0 !important }
 }
 
 .aboutButton{
-  margin-top: 50%;
-  margin-left: 43% ;
+  margin-top: 1em;
+  margin-left: 5em;
 }
 .aboutButton span {
   cursor: pointer;
@@ -176,21 +198,6 @@ html::-webkit-scrollbar { width: 0 !important }
   margin-top: 10%;
 }
 
-.icon{
-  padding-left: 8vw!important;
-}
-
-.about-me{
-    min-height: 100%;
-    height: 100%;
-    font-size: 3.5vw ;
-    text-align: center; 
-    padding-bottom: 7vw;
-    margin-right: 65px;
-    font-family: bookman-jf-pro, serif;
-
-}
-
 #projects{
   padding-top: 3vw;
   padding-bottom: 12.7vw;
@@ -207,7 +214,7 @@ html::-webkit-scrollbar { width: 0 !important }
 .rowm{
   margin-top: 20px;
   margin-bottom: 60px;
-  margin-left: 130px;
+  margin-left: 50px;
 }
 
 .projects-title{
@@ -245,8 +252,8 @@ html::-webkit-scrollbar { width: 0 !important }
 
 .flip-card {
   background-color: transparent;
-  width: 350px;
-  height: 300px;
+  width: 28vw;
+  height: 19vw;
   // border: 1px solid #f1f1f1;
   z-index: 1;
   float: left;

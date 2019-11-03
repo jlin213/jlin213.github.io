@@ -32,6 +32,15 @@ $(document).on("mousemove", function(e){
     // $cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
 })
 
+// jQuery(document).ready(function($){
+//     $('a.scroll-link').click(function(e){
+//         e.preventDefault();
+//         $id = $(this).attr('href');
+//         $('body,html').animate({
+//             scrollTop: $($id).offset().top -20
+//         }, 750);
+//     });
+// });
 
 
 
