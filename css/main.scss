@@ -233,10 +233,10 @@ span {
 .about-intro {
   width: 40%;
   float: left;
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   font-weight:500;
   font-family: 'Inter', sans-serif;
-  line-height: 35px;
+  line-height: 3vw;
 }
 
 .about-skills-container{
@@ -254,8 +254,8 @@ span {
 .about-skills{
   font-family: 'Inter', sans-serif;
   font-family: 'Nunito Sans', sans-serif;  
-  font-weight: 700; 
-  font-size: 14px;
+  font-weight: 600; 
+  font-size: 1vw;
   color: #020101;
   line-height: 31px;
 }
@@ -359,10 +359,10 @@ span {
   text-decoration: none;
   color: rgb(247,247,247);
 }
-
-.icon {
-  padding-left: 2.2em !important;
+.outro-container{
+  line-height: 20 
 }
+
 
 .contact-layout {
   margin-left: 100px;
@@ -599,6 +599,14 @@ textarea {
   text-decoration: none;
   color:rgba(0, 0, 0, 0.4);
 }
+
+
+.end-footer{
+  color:white;
+  margin-left:12vw;
+}
+
+
 .projectButton {
   margin-bottom: 10vw;
   margin-left: 22%;
@@ -889,6 +897,34 @@ textarea {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+   @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .mouse{
+      width: 70%; 
+    }
+    .mouse-scroll{
+      padding-top:25vw;
+    }
+    #home{
+      min-height: 80%;
+      height:80%;
+    }
+    .contact-visit{
+      font-size: 1vw;
+      margin-top: -2vw;
+    }
+    .resume-btn{
+      font-size: 1.5vw;
+    }
+    .contact{
+      min-height:30%;
+      height:30%;
+    }
+    .end-footer{
+      font-size: 1vw;
+    }
+  }
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
