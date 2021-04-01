@@ -368,10 +368,6 @@ span {
   color: #f7f7f7;
 }
 
-.outro-container {
-  line-height: 20;
-}
-
 .contact-layout {
   margin-left: 100px;
 }
@@ -919,6 +915,12 @@ textarea {
     min-height: 80%;
     height: 80%;
   }
+  .about {
+    padding-left: 7vw;
+  }
+  .about-skills {
+    line-height: 2vw;
+  }
   .contact-visit {
     font-size: 1vw;
     margin-top: -2vw;
@@ -929,9 +931,16 @@ textarea {
   .contact {
     min-height: 30%;
     height: 30%;
+    padding-left: 7vw;
   }
   .end-footer {
     font-size: 1vw;
+  }
+  .outro-text {
+    line-height: 2vw;
+  }
+  .outro {
+    height: 15%;
   }
 }
 
