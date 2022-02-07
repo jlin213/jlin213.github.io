@@ -38,15 +38,7 @@ $fallDown: -200px;
 $delay: 50ms;
 $duration: 5s;
 
-.text-container {
-    width: 100%;
-    color: white;
-    font-family: 'Cutive Mono', monospace;
-    letter-spacing: 4px;
-    font-size: 100px;
-    -webkit-font-smoothing: antialiased;
-    text-align: center;
-}
+
 
 span {
     display: inline-block;
@@ -80,13 +72,7 @@ span {
 .nav-item1:hover:after {
   width: 80%;
 }
-// .nav-line{
-//   width: 50px;
-//   height: 3px;
-//   transition: all 0.4s ease-in-out;
-//   z-index: 1;
-//   color: #d5d5d8;
-// }
+
 
 .nav-item2{
   color: #222 !important 
@@ -95,10 +81,6 @@ span {
 .nav-item2:after{
   background-color: #191919 !important
 }
-// .nav-item2:hover:after {
-//   width: 80% !important
-// }
-
 
 #home {
   /* this is needed or the background will be offset by a few pixels at the top */
@@ -110,25 +92,25 @@ span {
   position: relative;
 }
 
-#home::before {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: -1;
+// #home::before {
+//   content: "";
+//   position: fixed;
+//   left: 0;
+//   right: 0;
+//   z-index: -1;
 
-  display: block;
-  // background-image: url("/img/bg.jpg");
-  background-size:cover;
-  width: 100%;
-  height: 100%;
+//   display: block;
+//   // background-image: url("/img/bg.jpg");
+//   background-size:cover;
+//   width: 100%;
+//   height: 100%;
 
-  -webkit-filter: blur(1px);
-  -moz-filter: blur(1px);
-  -o-filter: blur(1px);
-  -ms-filter: blur(1px);
-  filter: blur(1px);
-}
+//   -webkit-filter: blur(1px);
+//   -moz-filter: blur(1px);
+//   -o-filter: blur(1px);
+//   -ms-filter: blur(1px);
+//   filter: blur(1px);
+// }
 .background{
   max-width: 100%;
   height: auto;
@@ -200,7 +182,6 @@ span {
   background-color: #f8f8f8;
   height: 100%;
   width: 100%;
-  padding-bottom: 13%;
   position: relative;
 }
 
@@ -231,7 +212,7 @@ span {
 }
 
 .about-intro {
-  width: 45%;
+  width: 40%;
   float: left;
   font-size: 1.3vw;
   font-weight:500;
@@ -247,6 +228,12 @@ span {
   height: 100%;
 }
 
+.skills-big-title{
+  color:#b19386;  
+  font-family: 'Work Sans', sans-serif;
+  font-size: 35px;
+  margin-bottom: 35px;
+}
 .skills-title{
   float:left;
   width: 20%;
@@ -256,11 +243,148 @@ span {
   font-family: 'Work Sans', sans-serif;
   font-size: 0.9vw;
 }
-
-.about-skills-container{
-  margin-left: 60%;
-  margin-right: 10%;
+#skills-details-1, #skills-details-2, #skills-details-3, #skills-details-4 {
+  overflow: hidden;
+  max-width: 0%;
+  transition: max-width .25s ease-in;
+  white-space: nowrap;
 }
+
+#skills-title-1:hover + #skills-details-1, 
+#skills-title-2:hover + #skills-details-2,
+#skills-title-3:hover + #skills-details-3,
+#skills-title-4:hover + #skills-details-4{
+  max-width: 100%;
+}
+#skills-title-1:hover:after {
+  width: 5%;
+}
+
+#skills-title-1, #skills-title-2 , #skills-title-3, #skills-title-4{
+  background: 
+      linear-gradient(currentColor 0 0) 
+      0 100% /var(--d, 0) 2px 
+    no-repeat;
+  transition:0.5s;
+}
+#skills-title-1:hover, #skills-title-2:hover , #skills-title-3:hover ,#skills-title-4:hover {
+  --d: 85%;
+}
+
+.about-timeline{
+  margin-left: 40%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat";
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.timeline {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+.timeline ul li {
+  padding: 20px;
+  background-color: #1e1f22;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+.timeline-content h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color: #000;
+}
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: gray;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -30px;
+  }
+}
+
+
+
+
+
+
+
 .about-skills-title{
   font-family: 'Inter', sans-serif;
   font-weight: 500; 
@@ -278,17 +402,7 @@ span {
   line-height: 31px;
 }
 
-.msft{
-  transform: scale(0.15,0.15);
-  margin-top: -70%;
-  margin-left: -20%;
-}
-.coursera{
-  transform: scale(0.22, 0.22);
-  margin-top: -30%;
-  margin-left: 10%;
-  background: #d4d4d4;
-}
+
 .about-subtitle{
   font-family: "Old Standard TT",serif;
   margin-top:2%;
@@ -319,7 +433,7 @@ span {
 }
 //resume modal
 .resume-btn{
-  margin-left:75%;
+  margin-left: 5vw;
   background-color: #191919;
   color: white;
   border: 2px solid #191919;
